@@ -763,7 +763,7 @@ class ChainTest {
 }
 // unnamed ends here
 
-// [[file:index.org::15541]]
+// [[file:index.org::15506]]
 class SwitchMapTest {
   @Test
   fun `switchMap cancels previous inner stream`() = runTest {
@@ -784,7 +784,7 @@ class SwitchMapTest {
 }
 // unnamed ends here
 
-// [[file:index.org::15991]]
+// [[file:index.org::15956]]
 class LatestTest {
   @Test
   fun `latest combines two flows`() = runTest {
@@ -801,7 +801,7 @@ class LatestTest {
 }
 // unnamed ends here
 
-// [[file:index.org::16316]]
+// [[file:index.org::16281]]
 class ApplyLatestTest {
   @Test
   fun `applyLatest applies function to value`() = runTest {
@@ -814,7 +814,7 @@ class ApplyLatestTest {
 }
 // unnamed ends here
 
-// [[file:index.org::16676]]
+// [[file:index.org::16641]]
 class UntilStreamTest {
   @Test
   fun `untilStream stops when stop emits`() = runTest {
@@ -826,7 +826,7 @@ class UntilStreamTest {
 }
 // unnamed ends here
 
-// [[file:index.org::17045]]
+// [[file:index.org::17010]]
 class SinceStreamTest {
   @Test
   fun `sinceStream waits for start`() = runTest {
@@ -838,7 +838,7 @@ class SinceStreamTest {
 }
 // unnamed ends here
 
-// [[file:index.org::17391]]
+// [[file:index.org::17356]]
 class BufferTest {
   @Test
   fun `buffer collects into fixed-size lists`() = runTest {
@@ -848,7 +848,7 @@ class BufferTest {
 }
 // unnamed ends here
 
-// [[file:index.org::17772]]
+// [[file:index.org::17737]]
 class BufferTimeTest {
   @Test
   fun `bufferTime collects over time windows`() = runTest {
@@ -859,7 +859,7 @@ class BufferTimeTest {
 }
 // unnamed ends here
 
-// [[file:index.org::18219]]
+// [[file:index.org::18184]]
 class WindowTest {
   @Test
   fun `window splits into fixed-size groups`() = runTest {
@@ -869,7 +869,7 @@ class WindowTest {
 }
 // unnamed ends here
 
-// [[file:index.org::18722]]
+// [[file:index.org::18687]]
 class EagerTest {
   @Test
   fun `eager prefetches values`() = runTest {
@@ -879,7 +879,7 @@ class EagerTest {
 }
 // unnamed ends here
 
-// [[file:index.org::19789]]
+// [[file:index.org::19754]]
 class ReplaySubjectTest {
   @Test
   fun `ReplaySubject replays buffered values`() = runTest {
@@ -896,7 +896,7 @@ class ReplaySubjectTest {
 }
 // unnamed ends here
 
-// [[file:index.org::20162]]
+// [[file:index.org::20127]]
 class ReplayShareTest {
   @Test
   fun `replay multicasts with buffer`() = runTest {
@@ -921,7 +921,7 @@ class ReplayShareTest {
 }
 // unnamed ends here
 
-// [[file:index.org::20551]]
+// [[file:index.org::20516]]
 class ReplayFactoryTest {
   @Test
   fun `replayFactory creates stream copies`() = runTest {
