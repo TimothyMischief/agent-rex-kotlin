@@ -484,7 +484,7 @@ suspend fun <T> retry(
 }
 // unnamed ends here
 
-// [[file:index.org::14179]]
+// [[file:index.org::14180]]
 /**
  * Merges multiple flows into a single flow, emitting values as they arrive.
  */
@@ -496,14 +496,14 @@ fun <T> merge(vararg flows: Flow<T>): Flow<T> = flowMerge(*flows)
 fun <T> merge(flows: List<Flow<T>>): Flow<T> = flowMerge(*flows.toTypedArray())
 // unnamed ends here
 
-// [[file:index.org::14571]]
+// [[file:index.org::14572]]
 /**
  * Flattens a stream of streams by merging them into a single stream.
  */
 fun <T> Flow<Flow<T>>.mergeAll(): Flow<T> = this.flattenMerge()
 // unnamed ends here
 
-// [[file:index.org::14990]]
+// [[file:index.org::14991]]
 /**
  * Maps each value to a flow and flattens the results concurrently.
  * Also known as chain in some libraries.
@@ -516,7 +516,7 @@ fun <T, U> Flow<T>.flatMap(transform: suspend (T) -> Flow<U>): Flow<U> =
   chain(transform)
 // unnamed ends here
 
-// [[file:index.org::15495]]
+// [[file:index.org::15485]]
 /**
  * Maps each value to a flow, cancelling the previous inner flow when a new value arrives.
  * Only values from the most recent inner flow are emitted.
@@ -525,7 +525,7 @@ fun <T, U> Flow<T>.switchMap(transform: suspend (T) -> Flow<U>): Flow<U> =
   this.flatMapLatest { transform(it) }
 // unnamed ends here
 
-// [[file:index.org::15945]]
+// [[file:index.org::15935]]
 /**
  * Combines two flows, emitting tuples of latest values whenever either emits.
  * Only starts emitting after both flows have produced at least one value.
@@ -534,7 +534,7 @@ fun <T, U> latest(flow1: Flow<T>, flow2: Flow<U>): Flow<Pair<T, U>> =
   flow1.combine(flow2) { a, b -> Pair(a, b) }
 // unnamed ends here
 
-// [[file:index.org::16269]]
+// [[file:index.org::16259]]
 /**
  * Applies the latest function to the latest value.
  */
@@ -544,7 +544,7 @@ fun <T, U> applyLatest(
 ): Flow<U> = latest(fnFlow, valueFlow).map { (fn, value) -> fn(value) }
 // unnamed ends here
 
-// [[file:index.org::16611]]
+// [[file:index.org::16601]]
 /**
  * Emits values from source until stop stream emits.
  */
@@ -572,7 +572,7 @@ suspend fun <T> Flow<T>.untilStream(stop: Flow<*>): Flow<T> = channelFlow {
 }
 // unnamed ends here
 
-// [[file:index.org::16981]]
+// [[file:index.org::16971]]
 /**
  * Emits values from source only after start stream emits.
  */
@@ -599,7 +599,7 @@ suspend fun <T> Flow<T>.sinceStream(start: Flow<*>): Flow<T> = channelFlow {
 }
 // unnamed ends here
 
-// [[file:index.org::17335]]
+// [[file:index.org::17328]]
 /**
  * Collects values into lists of the specified size.
  */
@@ -618,7 +618,7 @@ fun <T> Flow<T>.buffer(size: Int): Flow<List<T>> = flow {
 }
 // unnamed ends here
 
-// [[file:index.org::17708]]
+// [[file:index.org::17701]]
 /**
  * Collects values over time windows.
  * Note: Simplified implementation using periodic emission.
@@ -645,7 +645,7 @@ suspend fun <T> Flow<T>.bufferTime(ms: Long): Flow<List<T>> = flow {
 }
 // unnamed ends here
 
-// [[file:index.org::18162]]
+// [[file:index.org::18155]]
 /**
  * Splits source into windows of specified size.
  * Simplified to return lists like buffer.
@@ -665,7 +665,7 @@ fun <T> Flow<T>.window(size: Int): Flow<List<T>> = flow {
 }
 // unnamed ends here
 
-// [[file:index.org::18669]]
+// [[file:index.org::18662]]
 /**
  * Prefetches values from source.
  * Note: Kotlin Flow buffer() already provides buffering behavior.
@@ -681,7 +681,7 @@ fun <T> Flow<T>.eagerNow(bufferSize: Int, scope: kotlinx.coroutines.CoroutineSco
   shareIn(scope, kotlinx.coroutines.flow.SharingStarted.Eagerly, bufferSize.coerceAtLeast(0))
 // unnamed ends here
 
-// [[file:index.org::19729]]
+// [[file:index.org::19722]]
 /**
  * A multicasting subject that replays buffered values to new subscribers.
  * Note: Simplified using SharedFlow with replay.
@@ -704,7 +704,7 @@ class ReplaySubject<T>(bufferSize: Int = Int.MAX_VALUE) {
 }
 // unnamed ends here
 
-// [[file:index.org::20105]]
+// [[file:index.org::20098]]
 /**
  * Creates a replay wrapper for a flow.
  * Note: In Kotlin, use shareIn for multicasting.
@@ -724,7 +724,7 @@ fun <T> Flow<T>.share(
   shareIn(scope, kotlinx.coroutines.flow.SharingStarted.Lazily, 0)
 // unnamed ends here
 
-// [[file:index.org::20499]]
+// [[file:index.org::20492]]
 /**
  * Creates a factory that produces independent copies of a buffered flow.
  * Note: In Kotlin, SharedFlow subscribers share the same stream.

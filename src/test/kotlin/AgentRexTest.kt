@@ -696,7 +696,7 @@ class RetryTest {
 }
 // unnamed ends here
 
-// [[file:index.org::14193]]
+// [[file:index.org::14194]]
 class MergeTest {
   @Test
   fun `merge combines multiple flows`() = runTest {
@@ -718,7 +718,7 @@ class MergeTest {
 }
 // unnamed ends here
 
-// [[file:index.org::14580]]
+// [[file:index.org::14581]]
 class MergeAllTest {
   @Test
   fun `mergeAll flattens stream of streams`() = runTest {
@@ -741,7 +741,7 @@ class MergeAllTest {
 }
 // unnamed ends here
 
-// [[file:index.org::15005]]
+// [[file:index.org::15006]]
 class ChainTest {
   @Test
   fun `chain flattens inner flows`() = runTest {
@@ -763,7 +763,7 @@ class ChainTest {
 }
 // unnamed ends here
 
-// [[file:index.org::15506]]
+// [[file:index.org::15496]]
 class SwitchMapTest {
   @Test
   fun `switchMap cancels previous inner stream`() = runTest {
@@ -784,7 +784,7 @@ class SwitchMapTest {
 }
 // unnamed ends here
 
-// [[file:index.org::15956]]
+// [[file:index.org::15946]]
 class LatestTest {
   @Test
   fun `latest combines two flows`() = runTest {
@@ -801,7 +801,7 @@ class LatestTest {
 }
 // unnamed ends here
 
-// [[file:index.org::16281]]
+// [[file:index.org::16271]]
 class ApplyLatestTest {
   @Test
   fun `applyLatest applies function to value`() = runTest {
@@ -814,7 +814,7 @@ class ApplyLatestTest {
 }
 // unnamed ends here
 
-// [[file:index.org::16641]]
+// [[file:index.org::16631]]
 class UntilStreamTest {
   @Test
   fun `untilStream stops when stop emits`() = runTest {
@@ -826,7 +826,7 @@ class UntilStreamTest {
 }
 // unnamed ends here
 
-// [[file:index.org::17010]]
+// [[file:index.org::17000]]
 class SinceStreamTest {
   @Test
   fun `sinceStream waits for start`() = runTest {
@@ -838,7 +838,7 @@ class SinceStreamTest {
 }
 // unnamed ends here
 
-// [[file:index.org::17356]]
+// [[file:index.org::17349]]
 class BufferTest {
   @Test
   fun `buffer collects into fixed-size lists`() = runTest {
@@ -848,7 +848,7 @@ class BufferTest {
 }
 // unnamed ends here
 
-// [[file:index.org::17737]]
+// [[file:index.org::17730]]
 class BufferTimeTest {
   @Test
   fun `bufferTime collects over time windows`() = runTest {
@@ -859,7 +859,7 @@ class BufferTimeTest {
 }
 // unnamed ends here
 
-// [[file:index.org::18184]]
+// [[file:index.org::18177]]
 class WindowTest {
   @Test
   fun `window splits into fixed-size groups`() = runTest {
@@ -869,7 +869,7 @@ class WindowTest {
 }
 // unnamed ends here
 
-// [[file:index.org::18687]]
+// [[file:index.org::18680]]
 class EagerTest {
   @Test
   fun `eager prefetches values`() = runTest {
@@ -879,7 +879,7 @@ class EagerTest {
 }
 // unnamed ends here
 
-// [[file:index.org::19754]]
+// [[file:index.org::19747]]
 class ReplaySubjectTest {
   @Test
   fun `ReplaySubject replays buffered values`() = runTest {
@@ -896,7 +896,7 @@ class ReplaySubjectTest {
 }
 // unnamed ends here
 
-// [[file:index.org::20127]]
+// [[file:index.org::20120]]
 class ReplayShareTest {
   @Test
   fun `replay multicasts with buffer`() = runTest {
@@ -921,7 +921,7 @@ class ReplayShareTest {
 }
 // unnamed ends here
 
-// [[file:index.org::20516]]
+// [[file:index.org::20509]]
 class ReplayFactoryTest {
   @Test
   fun `replayFactory creates stream copies`() = runTest {
