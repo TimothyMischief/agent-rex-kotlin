@@ -24,10 +24,10 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Build
-        run: ./gradlew build
+        run: gradle build
 
       - name: Run tests
-        run: ./gradlew test
+        run: gradle test
 
 # JitPack builds automatically from git tags
 # Users add: maven { url = "https://jitpack.io" }
