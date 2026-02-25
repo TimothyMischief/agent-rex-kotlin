@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.agent-rex"
-version = "0.0.0-nightly.20260224"
+version = "0.0.0-nightly.20260225"
 
 repositories {
   mavenCentral()
